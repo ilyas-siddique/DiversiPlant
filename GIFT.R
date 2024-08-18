@@ -1,4 +1,4 @@
-# 
+# Load species & trait data for geogr point coordinates from GIFT
 
 # extend timeout to load large datasets:
 options(timeout = max(1000, getOption("timeout"))) 
