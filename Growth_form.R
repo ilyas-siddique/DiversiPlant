@@ -70,3 +70,12 @@ func_group <- spp_cl_gw %>%
     )
   )
 str(func_group)
+
+func_group$trait_value_1.4.2<-as.factor(func_group$trait_value_1.4.2)
+func_group$trait_value_1.2.2<-as.factor(func_group$trait_value_1.2.2)
+func_group$prioritized_trait<-as.factor(func_group$prioritized_trait)
+
+func_group$growth_form<-(func_group$prioritized_trait)
+Growth_form<-func_group[,-c(2,3,4)]
+str(Growth_form)
+summary(Growth_form$growth_form)
