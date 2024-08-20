@@ -21,16 +21,16 @@ View(raster_env)#list of climatic variables
 
 env_data <- GIFT_env(
 	entity_ID = NULL,
-      miscellaneous = "biome",
-      rasterlayer = c("wc2.0_bio_30s_12", "wc2.0_bio_30s_01"),#mostrar acumulada e não a maedia
+	miscellaneous = "biome",
+	rasterlayer = c("wc2.0_bio_30s_12", "wc2.0_bio_30s_01"),
 	GIFT_version = "latest",
 	api = "https://gift.uni-goettingen.de/api/extended/"
 )
 View(env_data)
 
 biom <- merge(shapes_data, env_data[-c(2)], by = "entity_ID")
-View(biom)#mean temperature, mean annual precipitation, geographic coordinates, biomes, botanical country and so on variables
+str(biom)#mean temperature, mean annual precipitation, geographic coordinates, biomes, botanical country and so on variables
 
 
 
-GIFT_species_distribution()
+
