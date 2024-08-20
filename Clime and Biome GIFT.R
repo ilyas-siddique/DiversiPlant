@@ -1,4 +1,6 @@
-biomes_data <- GIFT_shapes()
+biomes_data <- GIFT_shapes(entity_ID = NULL, 
+                  api = "https://gift.uni-goettingen.de/api/extended/", 
+                  GIFT_version = "latest"))
 View(biomes_data) #need add overlap and entity_type selection command
 
 misc_env <- GIFT_env_meta_misc(
